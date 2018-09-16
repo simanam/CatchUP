@@ -1,0 +1,6 @@
+.tabs a{
+    color: #64b5f6;
+}
+.tabs .active{
+    background: inherit !important;
+} 

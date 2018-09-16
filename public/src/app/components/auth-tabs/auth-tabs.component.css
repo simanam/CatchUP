@@ -1,0 +1,21 @@
+.bodyDiv{
+    height: 116vh;
+    background: #FAFAFA;
+}
+div.bodyContainer{
+    margin-top: 50px !important;
+}
+.welcome{
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.tabs a{
+    color: #64b5f6;
+}
+.tabs .active{
+    background: inherit !important;
+} 
+.auth-content{
+    height: 550px !important;
+}

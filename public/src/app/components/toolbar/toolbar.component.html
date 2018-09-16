@@ -1,0 +1,47 @@
+<nav class="nav-extened">
+  <div class="container">
+    <div class="nav-wrapper">
+      <a (click)="goTOHome()" class="brand-logo">CatchUp!</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+       
+        <li class="dropdown-trigger dropdown-button" data-target='dropdown1'>
+          <i class="fa fa-globe fa-1x badge"></i>
+          <span class="nav-label-icon" *ngIf= "count.length > 0">{{count.length}}</span>
+          <ul id='dropdown1' class='dropdown-content col s12 collection'>
+            <li class="collection-item avatar" *ngFor= "let data of notificationsArr">
+              <img src="http://placehold.it/50x50" class="circle">
+              <span [ngClass]="data.read ? 'isRead' : 'unread'">{{data.message}}</span>
+              <p class="time">{{TimeFromNow(data.created)}}</p>
+            </li>
+            <li *ngIf="notificationsArr.length <= 0">
+                <p class="text">No Notification</p>
+              </li>
+              <p class="secondary-content">
+                <a class="markAll" (click)="markAll()">Mark All As Read</a>
+              </p>
+    
+          </ul>
+        </li>
+      
+        <li>
+          <a (click)="logout()">Logout</a>
+        </li>
+        <li>
+            <a href="sass.html">{{user.username}}</a>
+          </li>
+      </ul>
+    </div>
+
+    <div class="nav-content">
+      <!-- <div class="nav-div">
+
+        <img class="circle responsive-img" src="http://placehold.it/50x50">
+
+
+      </div> -->
+
+
+    </div>
+
+  </div>
+</nav>

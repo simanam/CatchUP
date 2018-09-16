@@ -1,0 +1,65 @@
+<div class="row">
+  <div class="col s12">
+    <div class="row">
+      <div class="card">
+        <div class="valign-wrapper" style="background: #64b5f6">
+          <div class="col s12 imgCol">
+            <img src="http://placehold.it/50x50" class="circle">
+          </div>
+          <div class="row">
+            <div class="col 10 nameCol">
+              <span>Username</span>
+              <p class="isOnline">Online</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col s12 rowDiv">
+    <div class="row">
+      <div class="col s12">
+        <div class="message-wrapper">
+          <div class="left">
+            <div class="chat-bubble left slide-left">
+              <div class="message">This is left message</div>
+            </div> 
+          </div>
+
+          <div class="right">
+              <div class="chat-bubble right slide-right">
+                <div class="message">This is right message</div>
+              </div> 
+            </div>
+
+            <div class="cf"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col s12" style="margin: 0px">
+    <div class="row">
+      <div class="card" style="height: 55px">
+        <div class="inputRow">
+          <form (ngSubmit)="sendMessage()">
+            <div class="input-field inputField col s10">
+              <textarea name="message" [(ngModel)]="message" class="materialize-textarea inputBox"></textarea>
+
+            </div>
+            <div class="input-field col s1 emojiDiv">
+              <button class="emojiBtn">Emoji</button>
+            </div>
+            <div class="input-field col s1">
+                <button class="suffix btn">Send</button>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>

@@ -1,0 +1,69 @@
+<div class="container">
+  <div class="row">
+    <div class="col s10 offset-s1" id="panel">
+
+      <div class="progress" *ngIf = "showSpinner">
+        <div class="indeterminate"></div>
+      </div>
+
+      <h5 id="title">Sign UP</h5>
+      <div id="errorMsg" *ngIf="errorMessage">
+        <span>{{errorMessage}}</span>
+      </div>
+      <form class="col s12" [formGroup]="signupForm" novalidate (ngSubmit)="signupUser()">
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="first_name" type="text" class="validate" formControlName="fname">
+            <label for="first_name">First Name</label>
+            <span class="error" *ngIf="!signupForm.controls['fname'].valid && signupForm.controls['fname'].touched">
+              First name is required
+
+            </span>
+          </div>
+          <div class="input-field col s6">
+            <input id="last_name" type="text" class="validate" formControlName="lname">
+            <label for="last_name">Last Name</label>
+            <span class="error" *ngIf="!signupForm.controls['lname'].valid && signupForm.controls['lname'].touched">
+              Last name is required
+
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="user_name" type="text" class="validate" formControlName="username">
+            <label for="user_name">User Name</label>
+            <span class="error" *ngIf="!signupForm.controls['username'].valid && signupForm.controls['username'].touched">
+              Username is required
+
+            </span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email" type="email" class="validate" formControlName="email">
+            <label for="email">Email</label>
+            <span class="error" *ngIf="!signupForm.controls['email'].valid && signupForm.controls['email'].touched">
+              Email name is required
+
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="pass-word" type="password" class="validate" formControlName="password">
+            <label for="pass-word">Password</label>
+            <span class="error" *ngIf="!signupForm.controls['password'].valid && signupForm.controls['password'].touched">
+              Password name is required
+
+            </span>
+          </div>
+        </div>
+        <button class="btn waves-effect" id="signupbtn" [disabled]="!signupForm.valid">
+          Sign Up
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
